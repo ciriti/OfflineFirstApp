@@ -80,8 +80,4 @@ class TaskViewModel(
         }
 
     }
-
-//    private fun selectTask(taskId: String) {
-//        setEffect { TasksEffect.NavigateToTaskDetail(taskId) }
-//    }
 }
