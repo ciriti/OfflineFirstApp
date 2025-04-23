@@ -5,9 +5,8 @@ An offline-first Android application for train technicians to view maintenance t
 ## Architecture Overview
 
 ### Core Principles
-- **Offline-First** - Prioritizes local data with graceful network fallback
-- **Unidirectional Data Flow** - Clear separation between UI and business logic
-- **Reactive UI** - Compose-based interface responding to state changes
+- **Offline-First** - Prioritizes local data
+- **Unidirectional Data Flow**
 - **Modular Design** - Strict separation of concerns via clean architecture layers
 
 ### Tech Stack
@@ -28,7 +27,7 @@ An offline-first Android application for train technicians to view maintenance t
 
 2. **Domain Layer**
     - Entity definitions
-    - Use cases/interfaces
+    - Interfaces
     - Pure Kotlin (no Android dependencies)
 
 3. **UI Layer**
@@ -38,6 +37,6 @@ An offline-first Android application for train technicians to view maintenance t
 
 ## Setup
 
-1. Clone repository
-2. Open in Android Studio (latest stable version)
+1. Clone repository https://github.com/ciriti/OfflineFirstApp.git
+2. Open in Android Studio
 3. Build and run

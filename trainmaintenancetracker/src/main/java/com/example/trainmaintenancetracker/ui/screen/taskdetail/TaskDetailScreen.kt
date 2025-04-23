@@ -30,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.trainmaintenancetracker.R
 import com.example.trainmaintenancetracker.domain.model.Task
+import com.example.trainmaintenancetracker.domain.model.isNotEmpty
 import com.example.trainmaintenancetracker.ui.component.ErrorContent
 import com.example.trainmaintenancetracker.ui.component.LoadingIndicator
 import com.example.trainmaintenancetracker.ui.component.OfflineBanner
@@ -74,10 +75,11 @@ fun TaskDetailScreen(
             when {
                 state.isLoading -> LoadingIndicator()
                 state.error != null -> ErrorContent(errorMessage = state.error, onRetry = onRetry)
-                state.task != null -> TaskDetailContent(
+                state.task.isNotEmpty -> TaskDetailContent(
                     task = state.task,
                     modifier = Modifier.fillMaxWidth()
                 )
+                else -> Text("No task loaded")
             }
         }
     }
