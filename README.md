@@ -40,3 +40,22 @@ An offline-first Android application for train technicians to view maintenance t
 1. Clone repository https://github.com/ciriti/OfflineFirstApp.git
 2. Open in Android Studio
 3. Build and run
+
+## Testing
+
+The app includes Unit and UI tests
+
+### Unit Tests
+- ViewModel tests with MockK for mocking dependencies
+- Repository tests with Turbine for Flow testing
+- Coroutine testing using `kotlinx-coroutines-test`
+- Koin dependency injection testing
+
+### UI Tests
+- Compose UI tests using `createComposeRule()`
+- State-driven UI verification
+- Offline/online state testing
+
+To run tests:
+- Unit Tests: `./gradlew test`
+- Instrumentation Tests: `./gradlew connectedAndroidTest`
